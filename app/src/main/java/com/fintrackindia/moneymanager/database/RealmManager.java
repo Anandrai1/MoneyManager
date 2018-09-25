@@ -57,6 +57,7 @@ public class RealmManager {
         return realm;
     }
 
+
     public <E extends RealmObject> void update(final E object) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
