@@ -5,7 +5,6 @@ import android.content.Context;
 import com.fintrackindia.moneymanager.interfaces.IMainActivityListener;
 
 public class MainFragment extends BaseFragment {
-
     protected IMainActivityListener mMainActivityListener;
 
     @Override
@@ -19,4 +18,5 @@ public class MainFragment extends BaseFragment {
         super.onDetach();
         mMainActivityListener = null;
     }
+
 }

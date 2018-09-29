@@ -57,7 +57,6 @@ public class RealmManager {
         return realm;
     }
 
-
     public <E extends RealmObject> void update(final E object) {
         realm.executeTransaction(new Realm.Transaction() {
             @Override
@@ -126,6 +125,7 @@ public class RealmManager {
     public <E extends RealmObject> RealmObject findById(Class<E> clazz, String id) {
         return realm.where(clazz).equalTo("id", id).findFirst();
     }
+
     public <E extends RealmObject> RealmObject findBySMSTime(Class<E> clazz, Date date) {
         return realm.where(clazz).equalTo("date", date).findFirst();
     }

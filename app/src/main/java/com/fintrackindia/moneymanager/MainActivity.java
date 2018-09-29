@@ -715,7 +715,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Category category = new Category(category_name, expenses_Mode);
             RealmManager.getInstance().save(category, Category.class);
         }
-
     }
 
     public void onSetICategory() {
@@ -732,13 +731,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Category category = new Category(category_name, income_Mode);
             RealmManager.getInstance().save(category, Category.class);
         }
-
     }
 
     private boolean checkPermission() {
         int result = ContextCompat.checkSelfPermission(getApplicationContext(), READ_SMS);
         int result1 = ContextCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE);
-
         return result == PackageManager.PERMISSION_GRANTED && result1 == PackageManager.PERMISSION_GRANTED;
     }
 
@@ -751,7 +748,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (requestCode) {
             case PERMISSION_REQUEST_CODE:
                 if (grantResults.length > 0) {
-
                    /* boolean locationAccepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
                     boolean cameraAccepted = grantResults[1] == PackageManager.PERMISSION_GRANTED;*/
                     boolean readsms = grantResults[0] == PackageManager.PERMISSION_GRANTED;
@@ -800,7 +796,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }*/
         readMassageAdapter.notifyDataSetChanged();
     }
-
     @Override
     protected void onPostResume() {
         super.onPostResume();
